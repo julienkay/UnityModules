@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44131893, g: 0.490125, b: 0.57017505, a: 1}
+  m_IndirectSpecularColor: {r: 0.44131872, g: 0.49012476, b: 0.5701743, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 112000012, guid: 95459770e4c9f0e47abf9b0bab78a35d,
+  m_LightingDataAsset: {fileID: 112000016, guid: 9d37636b82849e24bae28798b57ca629,
     type: 2}
   m_ShadowMaskMode: 0
 --- !u!196 &4
@@ -269,77 +269,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1001 &82469570
@@ -443,35 +398,44 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  sliderType: 1
+  dispatchSlideValueOnStart: 1
+  overrideRectLimits: 0
+  _parentHasRectTransform: 0
+  defaultHorizontalValue: 0
   horizontalValueRange: {x: 0, y: 1}
-  verticalValueRange: {x: 0, y: 1}
   horizontalSlideLimits: {x: -0.09, y: 0.09}
-  verticalSlideLimits: {x: -0.065, y: 0.065}
   horizontalSteps: 0
+  _horizontalSlideEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  defaultVerticalValue: 0
+  verticalValueRange: {x: 0, y: 1}
+  verticalSlideLimits: {x: -0.065, y: 0.065}
   verticalSteps: 0
-  horizontalSlideEvent:
+  _verticalSlideEvent:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  verticalSlideEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  hackModeOn: 0
 --- !u!54 &112263978
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -549,7 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c592f16851a620743868a31232613370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ModelsParent: {fileID: 993508918}
+  _modelsParent: {fileID: 0}
   ModelPool:
   - GroupName: Rigged Hands
     _handPool: {fileID: 0}
@@ -1620,6 +1584,10 @@ Prefab:
       propertyPath: m_LocalRotation.x
       value: -0.99997807
       objectReference: {fileID: 0}
+    - target: {fileID: 4430945870454064, guid: 2276723046d707c4f94d431ceb80ab92, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2276723046d707c4f94d431ceb80ab92, type: 2}
   m_IsPrefabParent: 0
@@ -1695,6 +1663,22 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 218407820}
   m_Script: {fileID: 11500000, guid: e55d3703de8ab5d418cb97104179cb49, type: 3}
+--- !u!1 &218407823 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1180994678239160, guid: 9361ab6d13ee87644bc370bccb524144,
+    type: 2}
+  m_PrefabInternal: {fileID: 218407820}
+--- !u!114 &218407824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218407823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c3b6f9e7a282941977291a82b4e7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &248989643
 Prefab:
   m_ObjectHideFlags: 0
@@ -2225,11 +2209,11 @@ MonoBehaviour:
   leftHandControllers:
   - {fileID: 1120977480}
   - {fileID: 738521178}
-  - {fileID: 265548107}
-  rightHandControllers:
   - {fileID: 218407822}
   - {fileID: 1036247346}
+  - {fileID: 265548107}
   - {fileID: 833115646}
+  rightHandControllers: []
   OnLeftHandActive:
     m_PersistentCalls:
       m_Calls:
@@ -2764,77 +2748,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!4 &878203583 stripped
@@ -3918,6 +3857,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4360080876800316, guid: 80e9754fad44e784f97f6c76a2c7255b,
     type: 2}
   m_PrefabInternal: {fileID: 980822497}
+--- !u!1 &980822499 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1393620680427892, guid: 80e9754fad44e784f97f6c76a2c7255b,
+    type: 2}
+  m_PrefabInternal: {fileID: 980822497}
+--- !u!114 &980822500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 980822499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c3b6f9e7a282941977291a82b4e7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &993508917
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,6 +3953,7 @@ MonoBehaviour:
   tweenRotationalWarping: 1
   tweenPositionalWarping: 0
   syncMode: 0
+  forceCustomUpdate: 0
   allowManualTimeAlignment: 0
   warpingAdjustment: 30
   unlockHold: 303
@@ -4155,6 +4111,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4829828358790816, guid: 40e809833d307ef4983e1e71fe56e23b,
     type: 2}
   m_PrefabInternal: {fileID: 1120977479}
+--- !u!1 &1120977482 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1135166102121244, guid: 40e809833d307ef4983e1e71fe56e23b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1120977479}
+--- !u!114 &1120977483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1120977482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c3b6f9e7a282941977291a82b4e7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1153756627 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1329088948137194, guid: df84af96020c94b4695aec5c3427db16,
@@ -4208,77 +4180,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &1159737274 stripped
@@ -4334,77 +4261,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &1198429507
@@ -4514,6 +4396,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4527397571117942, guid: 72368278d054cda4bb18e5aa08ce971d,
     type: 2}
   m_PrefabInternal: {fileID: 1233296017}
+--- !u!1 &1233296019 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1257637052428748, guid: 72368278d054cda4bb18e5aa08ce971d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1233296017}
+--- !u!114 &1233296020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1233296019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c3b6f9e7a282941977291a82b4e7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1237833284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,77 +4716,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &1335330384
@@ -4982,77 +4835,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &1432746478
@@ -5519,77 +5327,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &1603087372 stripped
@@ -5645,77 +5408,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &1768660881 stripped
@@ -5776,53 +5494,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1768660885}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1768660885}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!82 &1768660885
@@ -6150,8 +5847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _displayInGameView: 1
   _enabledForBuild: 1
-  _sphereMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  _gizmoShader: {fileID: 4800000, guid: 309635e4933310a4d98f0e016c806769, type: 3}
+  _sphereMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 3}
+  _gizmoShader: {fileID: 0}
 --- !u!4 &1985126696
 Transform:
   m_ObjectHideFlags: 0
@@ -6218,77 +5915,32 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+  _controlEnabled: 1
+  startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.02}
   restingHeight: 0.5
   _springForce: 0.1
-  OnPress:
+  _OnPress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnUnpress:
+  _OnUnpress:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   toggledRestingHeight: 0.25
-  _toggled: 0
-  toggleEvent:
+  _isToggled: 0
+  _startToggled: 0
+  _toggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7b8e8fb53123e87458def40ee25598ae,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 950e6e66be1f197459ac2cc4676f2af2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  unToggleEvent:
+  _untoggleEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: ae962c51f2146e4439603b2865982593,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 409e434d2f294004794cabc31135207f,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1001 &2044456990
