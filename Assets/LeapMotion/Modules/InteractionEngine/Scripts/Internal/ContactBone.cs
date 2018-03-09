@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (C) Leap Motion, Inc. 2011-2018.                                 *
+ * Copyright (C) Leap Motion, Inc. 2011-2017.                                 *
  * Leap Motion proprietary and  confidential.                                 *
  *                                                                            *
  * Use subject to the terms of the Leap Motion SDK Agreement available at     *
@@ -9,6 +9,7 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using CrossConnected.Selection;
 
 namespace Leap.Unity.Interaction {
 
@@ -164,6 +165,10 @@ namespace Leap.Unity.Interaction {
 
       #if UNITY_EDITOR
       if (hitNonInteractionObject) {
+        //if we're not contacting an InteractionBehaviur we probably deactivated/removed that interactionBehaviour earlier in the same frame
+        if (contactingInteractionBehaviours.Count == 0) {
+            return;
+        }
         // If we hit something that isn't an Interaction Behaviour, there's probably an issue.
         Debug.LogError("Contact bone collided with something that's not an Interaction"
                      + "Behaviour! This is liable to cause contact bones to build unstable "
@@ -225,6 +230,10 @@ namespace Leap.Unity.Interaction {
       }
     }
 
-  }
+        public void Clear() {
+           contactingInteractionBehaviours.Clear();
+        }
+
+    }
 
 }

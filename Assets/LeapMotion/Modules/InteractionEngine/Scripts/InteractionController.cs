@@ -2072,6 +2072,17 @@ namespace Leap.Unity.Interaction {
 
     #endregion
 
-  }
+    public void ForceDisableSoftContact() {
+        ClearContactTracking();
+        _softContactEnabled = false;
+        enableContactBoneCollision();
 
+        for (int i = 0; i < contactBones.Length; i++) {
+            contactBones[i].Clear();
+        }
+        onPostDisableSoftContact();
+
+        _softContactCollisions.Clear();
+    }
+  }
 }
